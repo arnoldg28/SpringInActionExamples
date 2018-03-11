@@ -25,12 +25,12 @@ public class ImportXmlConfigTest {
   public void play() {
     player.play();
     assertEquals(
-        "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n" +
-        "-Track: Sgt. Pepper's Lonely Hearts Club Band\n" +
-        "-Track: With a Little Help from My Friends\n" +
-        "-Track: Lucy in the Sky with Diamonds\n" +
-        "-Track: Getting Better\n" +
-        "-Track: Fixing a Hole\n",
+        "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles" + System.lineSeparator() +
+        "-Track: Sgt. Pepper's Lonely Hearts Club Band" + System.lineSeparator() +
+        "-Track: With a Little Help from My Friends" + System.lineSeparator() +
+        "-Track: Lucy in the Sky with Diamonds" + System.lineSeparator() +
+        "-Track: Getting Better" + System.lineSeparator() +
+        "-Track: Fixing a Hole" + System.lineSeparator(),
         log.getLog());
   }
 

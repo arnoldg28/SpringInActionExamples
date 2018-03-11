@@ -24,20 +24,20 @@ public class ConstructorArgCollectionTest {
   public void play() {
     player.play();
     assertEquals(
-        "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n" +
-        "-Track: Sgt. Pepper's Lonely Hearts Club Band\n" +
-        "-Track: With a Little Help from My Friends\n" +
-        "-Track: Lucy in the Sky with Diamonds\n" +
-        "-Track: Getting Better\n" +
-        "-Track: Fixing a Hole\n" +
-        "-Track: She's Leaving Home\n" +
-        "-Track: Being for the Benefit of Mr. Kite!\n" +
-        "-Track: Within You Without You\n" +
-        "-Track: When I'm Sixty-Four\n" +
-        "-Track: Lovely Rita\n" +
-        "-Track: Good Morning Good Morning\n" +
-        "-Track: Sgt. Pepper's Lonely Hearts Club Band (Reprise)\n" +
-        "-Track: A Day in the Life\n",
+        "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles" + System.lineSeparator() +
+        "-Track: Sgt. Pepper's Lonely Hearts Club Band" + System.lineSeparator() +
+        "-Track: With a Little Help from My Friends" + System.lineSeparator() +
+        "-Track: Lucy in the Sky with Diamonds" + System.lineSeparator() +
+        "-Track: Getting Better" + System.lineSeparator() +
+        "-Track: Fixing a Hole" + System.lineSeparator() +
+        "-Track: She's Leaving Home" + System.lineSeparator() +
+        "-Track: Being for the Benefit of Mr. Kite!" + System.lineSeparator() +
+        "-Track: Within You Without You" + System.lineSeparator() +
+        "-Track: When I'm Sixty-Four" + System.lineSeparator() +
+        "-Track: Lovely Rita" + System.lineSeparator() +
+        "-Track: Good Morning Good Morning" + System.lineSeparator() +
+        "-Track: Sgt. Pepper's Lonely Hearts Club Band (Reprise)" + System.lineSeparator() +
+        "-Track: A Day in the Life" + System.lineSeparator(),
         log.getLog());
   }
 

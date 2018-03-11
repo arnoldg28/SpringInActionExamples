@@ -1,0 +1,20 @@
+# Ignore .iml files
+*.iml
+
+# Ignore .idea folder
+.idea/*
+!.idea/runConfigurations
+.idea/
+
+# Ignore Atlassian Intellij IDEA plugin config file
+atlassian-ide-plugin.xml
+
+# Ignore target folders
+target
+concordion-output
+
+# Ignore Eclipse project files
+.settings/
+.project
+.classpath
+
