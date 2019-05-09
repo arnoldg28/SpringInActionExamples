@@ -2,6 +2,7 @@ package com.habuma.restfun;
 
 import static org.junit.Assert.*;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,13 @@ public class MagicExistsTest {
    * You can set this property as an environment variable, a JVM system property, by adding a @BeforeClass
    * method and calling System.setProperty() or one of several other options.
    */
+
+  /*
+  @BeforeClass
+  public static void init() {
+    System.setProperty("magic","m");
+  }*/
+
   @Test
   public void shouldNotBeNull() {
     assertTrue(context.containsBean("magicBean"));
