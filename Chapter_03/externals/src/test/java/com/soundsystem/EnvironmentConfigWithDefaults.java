@@ -13,9 +13,15 @@ public class EnvironmentConfigWithDefaults {
   
   @Bean
   public BlankDisc blankDisc() {
-    return new BlankDisc(
+
+    BlankDisc blankDisc = new BlankDisc(
         env.getProperty("disc.title", "Rattle and Hum"),
         env.getProperty("disc.artist", "U2"));
+
+    //Modified this sample a little bit to show auto conversion sample with default
+    blankDisc.setMyInteger(env.getProperty("disc.myInteger", Integer.class, 30));
+
+    return blankDisc;
   }
   
 }

@@ -38,6 +38,7 @@ public class EnvironmentInjectionTest {
     public void assertBlankDiscProperties() {
       assertEquals("U2", blankDisc.getArtist());
       assertEquals("Rattle and Hum", blankDisc.getTitle());
+      assertEquals(new Integer(30), blankDisc.getMyInteger());
     }
     
   }
