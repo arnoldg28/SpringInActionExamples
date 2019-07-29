@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- configuration details go here -->
+
+    <bean id="audience" class="concert.Audience"/>
+
+    <aop:config>
+
+        <aop:aspect ref="audience">
+
+            <!-- Can be place within the scope of <aop:config> to be used across multiple aspects -->
+            <aop:pointcut id="performance" expression="execution(**concert.Performance.perform(..))"/>
+
+         <!--   <aop:before pointcut-ref="performance" method="silenceCellPhones"/>
+            <aop:before pointcut-ref="performance" method="takeSeats"/>
+            <aop:after-returning pointcut-ref="performance" method="applause"/>
+            <aop:after-throwing pointcut-ref="performance" method="demandRefund"/>-->
+
+            <!-- This contains all functionality of the four above. Either use this or the above (Comment out either one) -->
+            <aop:around pointcut-ref="performance" method="watchPerformance"/>
+
+        </aop:aspect>
+
+    </aop:config>
+
+
+
+</beans>
