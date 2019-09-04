@@ -8,7 +8,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
 
-
+/**
+ * Covers 4.3.4. Annotating introductions
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes={TrackCounterConfig.class})
 public class TrackCounterTest {
