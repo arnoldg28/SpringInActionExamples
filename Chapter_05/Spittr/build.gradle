@@ -1,6 +1,9 @@
+apply plugin: 'maven'
 apply plugin: 'eclipse'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
+
+group = 'com.sia'
 
 dependencies {
 	compile "org.springframework:spring-webmvc:$springVersion"
@@ -26,10 +29,6 @@ repositories {
 	maven { url 'http://maven.springframework.org/snapshot' }
 	maven { url 'http://download.java.net/maven/2' }
 	mavenCentral()
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
 }
 
 war {
