@@ -20,18 +20,25 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     InternalResourceViewResolver resolver = new InternalResourceViewResolver();
     resolver.setPrefix("/WEB-INF/views/");
     resolver.setSuffix(".jsp");
+    resolver.setExposeContextBeansAsAttributes(true);
     return resolver;
   }
-  
+
+  /**
+   * By calling enable() on the given DefaultServletHandlerConfigurer, you’re asking DispatcherServlet to forward
+   * requests for static resources to the servlet container ’s default servlet and not to try to handle them itself.
+   *
+   * @param configurer
+   */
   @Override
   public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
     configurer.enable();
   }
   
-  @Override
+/*  @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
     // TODO Auto-generated method stub
     super.addResourceHandlers(registry);
-  }
+  }*/
 
 }

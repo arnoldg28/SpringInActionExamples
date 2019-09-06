@@ -22,20 +22,20 @@ public class SpittleControllerTest {
   @Test
   public void houldShowRecentSpittles() throws Exception {
     List<Spittle> expectedSpittles = createSpittleList(20);
-    SpittleRepository mockRepository = mock(SpittleRepository.class);
+    SpittleRepository mockRepository = mock(SpittleRepository.class); // Mock repository
     when(mockRepository.findSpittles(Long.MAX_VALUE, 20))
         .thenReturn(expectedSpittles);
 
     SpittleController controller = new SpittleController(mockRepository);
-    MockMvc mockMvc = standaloneSetup(controller)
+    MockMvc mockMvc = standaloneSetup(controller) // Mock Spring MVC
         .setSingleView(new InternalResourceView("/WEB-INF/views/spittles.jsp"))
         .build();
 
-    mockMvc.perform(get("/spittles"))
+    mockMvc.perform(get("/spittles")) //GET /spittles
        .andExpect(view().name("spittles"))
        .andExpect(model().attributeExists("spittleList"))
-       .andExpect(model().attribute("spittleList", 
-                  hasItems(expectedSpittles.toArray())));
+       .andExpect(model().attribute("spittleList",
+                  hasItems(expectedSpittles.toArray()))); // Assert Expectations
   }
 
   @Test
