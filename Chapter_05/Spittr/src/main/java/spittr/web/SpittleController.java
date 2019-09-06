@@ -34,9 +34,13 @@ public class SpittleController {
     return spittleRepository.findSpittles(max, count);
   }
 
+  /**
+   * If no value attribute is given for @PathVariable, it assumes the placeholder ’s name is the same as the method parameter name.
+   *
+   */
   @RequestMapping(value="/{spittleId}", method=RequestMethod.GET)
   public String spittle(
-      @PathVariable("spittleId") long spittleId, 
+      @PathVariable("spittleId") long spittleId, // Can be: spittle(@PathVariable long spittleId, Model model) {
       Model model) {
     model.addAttribute(spittleRepository.findOne(spittleId));
     return "spittle";
